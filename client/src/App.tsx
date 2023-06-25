@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles"
 import { themeSettings } from "./theme"
 import { Box, CssBaseline } from "@mui/material"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Navbar from "@/scenes/navbar";
 
 
 function App() {

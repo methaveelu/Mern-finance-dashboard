@@ -5,6 +5,9 @@ import cors from "cors";
 import dotenv from "dotenv"
 import helmet from "helmet"
 import morgan from "morgan"
+import kpiRoutes from "./routes/kpi.js"
+import KPI from "./models/KPI.js";
+import { kpis } from "./data/data.js";
 
 // configuration
 dotenv.config()
@@ -19,26 +22,29 @@ app.use(cors())
 
 console.log("hello")
 
+// routes (entry points for routes)
+app.use("/kpi", kpiRoutes)
+
 //mongoose setup
 
 const PORT = process.env.PORT || 9000
 
 const mongodbUrl = process.env.MONGO_URL;
 
-mongoose.connect(mongodbUrl, {
-useUnifiedTopology: true,
-useNewUrlParser: true,
-});
+mongoose
+    .connect(mongodbUrl, {
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+    })
+    .then(async () => {
+        app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
-const connection = mongoose.connection;
-
-connection.on('connected', () => {
-console.log(`MongoDB connection to port ${PORT} successful!`);
-});
-
-connection.on('error', (error) => {
-console.log('MongoDB connection error:', error);
-});
-
+        /* ADD DATA ONE TIME ONLY OR AS NEEDED */
+        // await mongoose.connection.db.dropDatabase(); // drop current database, so we dont have duplicates..
+        // KPI.insertMany(kpis);//instructing Mongoose to use array method to insert all the documents in the kpis array into the KPI collection. This operation will asynchronously save all the documents to the database.
+        // Product.insertMany(products);
+        // Transaction.insertMany(transactions);
+    })
+    .catch((error) => console.log(`${error} did not connect`));
 
 

@@ -1,84 +1,84 @@
-import mongoose from 'mongoose';
-import {loadType} from 'mongoose-currency'
+import mongoose from "mongoose";
+import { loadType } from "mongoose-currency";
 
 const Schema = mongoose.Schema;
-loadType(mongoose)
+loadType(mongoose);
 
-const daySchema = new Schema ({
-    day: String,
-    revenue:{
-        type:mongoose.Types.Currency,
-            currency:"USD",
-            get: (v)=> v/100
+const daySchema = new Schema(
+  {
+    date: String,
+    revenue: {
+      type: mongoose.Types.Currency,
+      currency: "USD",
+      get: (v) => v / 100,
     },
-    expenses:{
-        type:mongoose.Types.Currency,
-            currency:"USD",
-            get: (v)=> v/100
+    expenses: {
+      type: mongoose.Types.Currency,
+      currency: "USD",
+      get: (v) => v / 100,
     },
-}, 
-{toJSON: {getters: true}} // to enable usage of get properties
-)
+  },
+  { toJSON: { getters: true } }
+);
 
-const monthSchema = new Schema ({
+const monthSchema = new Schema(
+  {
     month: String,
-    revenue:{
-        type:mongoose.Types.Currency,
-            currency:"USD",
-            get: (v)=> v/100
+    revenue: {
+      type: mongoose.Types.Currency,
+      currency: "USD",
+      get: (v) => v / 100,
     },
-    expenses:{
-        type:mongoose.Types.Currency,
-            currency:"USD",
-            get: (v)=> v/100
+    expenses: {
+      type: mongoose.Types.Currency,
+      currency: "USD",
+      get: (v) => v / 100,
     },
-    operationalExpenses:{
-        type:mongoose.Types.Currency,
-            currency:"USD",
-            get: (v)=> v/100
+    operationalExpenses: {
+      type: mongoose.Types.Currency,
+      currency: "USD",
+      get: (v) => v / 100,
     },
-    nonOperationalExpenses:{
-        type:mongoose.Types.Currency,
-            currency:"USD",
-            get: (v)=> v/100
+    nonOperationalExpenses: {
+      type: mongoose.Types.Currency,
+      currency: "USD",
+      get: (v) => v / 100,
     },
-}, 
-{toJSON: {getters: true}} // to enable usage of get properties
-)
+  },
+  { toJSON: { getters: true } }
+);
 
-const KPIschema = new Schema(
-    {
-        totalProfit:{
-            type:mongoose.Types.Currency,
-            currency:"USD",
-            get: (v)=> v/100
-        },
-        totalRevenue:{
-            type:mongoose.Types.Currency,
-            currency:"USD",
-            get: (v)=> v/100
-        },
-        totalExpenses:{
-            type:mongoose.Types.Currency,
-            currency:"USD",
-            get: (v)=> v/100
-        },
-        expensesByCategory:{
-            type:Map,
-            of:{
-                type:mongoose.Types.Currency,
-                currency:"USD",
-                get: (v)=> v/100
-            }
-           
-        },
-        monthlyData:[monthSchema],
-        dailyData:[daySchema],
+const KPISchema = new Schema(
+  {
+    totalProfit: {
+      type: mongoose.Types.Currency,
+      currency: "USD",
+      get: (v) => v / 100,
     },
-    {timestamps:true, toJSON: {getters: true}}
+    totalRevenue: {
+      type: mongoose.Types.Currency,
+      currency: "USD",
+      get: (v) => v / 100,
+    },
+    totalExpenses: {
+      type: mongoose.Types.Currency,
+      currency: "USD",
+      get: (v) => v / 100,
+    },
+    expensesByCategory: {
+      type: Map,
+      of: {
+        type: mongoose.Types.Currency,
+        currency: "USD",
+        get: (v) => v / 100,
+      },
+    },
+    monthlyData: [monthSchema],
+    dailyData: [daySchema],
+  },
+  { timestamps: true, toJSON: { getters: true } }
+);
 
-)
+const KPI = mongoose.model("KPI", KPISchema);
 
-const KPI= mongoose.model("KPI",KPIschema)
-
-export default KPI
+export default KPI;

@@ -29,10 +29,8 @@ app.use("/kpi", kpiRoutes)
 
 const PORT = process.env.PORT || 9000
 
-const mongodbUrl = process.env.MONGO_URL;
-
 mongoose
-    .connect(mongodbUrl, {
+    .connect(process.env.MONGO_URL, {
         useUnifiedTopology: true,
         useNewUrlParser: true,
     })

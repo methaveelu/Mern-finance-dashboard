@@ -7,20 +7,21 @@
  //localhost 1337 so that's the URL that we're going to call every time we make an API call 
 
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react"
+import { GetKpisResponse } from "./types";
 
 export const api = createApi({
     baseQuery:fetchBaseQuery({baseUrl: import.meta.env.VITE_BASE_URL}),
     reducerPath: "main",
-    tagTypes:["Kpis"], //name of each API data
+    tagTypes:["Kpis"], //name of each API data (can be seen in mongoose)
 
-    endpoints:(build)=>({
-        getKpis:build.query<void,void>({
-            query:()=>"kpi/kpis/",//endpoint url for kpis
+    endpoints:(build) =>({
+        getKpis:build.query<Array<GetKpisResponse>,void>({
+            query:() =>"kpi/kpis/",//endpoint url for kpis
             providesTags:["Kpis"],
-        })
+        }),
 
     })
 
-})
+});
 
 export const {useGetKpisQuery} = api;// this kpi endpoint is made available in api constant

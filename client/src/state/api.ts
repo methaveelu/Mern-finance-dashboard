@@ -7,12 +7,12 @@
  //localhost 1337 so that's the URL that we're going to call every time we make an API call 
 
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react"
-import { GetKpisResponse, GetProductsResponse } from "./types";
+import { GetKpisResponse, GetProductsResponse, GetTransactionsResponse } from "./types";
 
 export const api = createApi({
     baseQuery:fetchBaseQuery({baseUrl: import.meta.env.VITE_BASE_URL}),
     reducerPath: "main",
-    tagTypes:["Kpis", "Products"], //name of each API data (can be seen in mongoose)
+    tagTypes:["Kpis", "Products", "Transactions"], //name of each API data (can be seen in mongoose)
 
     endpoints:(build) =>({
         getKpis:build.query<Array<GetKpisResponse>,void>({
@@ -20,13 +20,13 @@ export const api = createApi({
             providesTags:["Kpis"],
         }),
         getProducts:build.query<Array<GetProductsResponse>,void>({
-            query:() =>"product/products/",//endpoint url for kpis
+            query:() =>"product/products/",//endpoint url 
             providesTags:["Products"],
         }),
-
+        getTransactions:build.query<Array<GetTransactionsResponse>,void>({
+            query:() =>"transaction/transactions/",
+            providesTags:["Transactions"],
+        }),
     })
-    
-
 });
-
-export const {useGetKpisQuery, useGetProductsQuery} = api;// this kpi endpoint is made available in api constant
+export const {useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery} = api;//  endpoints are made available in api constant

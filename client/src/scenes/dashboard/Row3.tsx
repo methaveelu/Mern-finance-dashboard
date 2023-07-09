@@ -95,7 +95,7 @@ const pieChartData = useMemo(()=>{
       <Box mt='0.5rem' p='0 0.5rem' height="75%" 
       sx={{"& .MuiDataGrid-root" : {color: palette.grey[300], border:'none'},
           "& .MuiDataGrid-cell" : {borderBottom:`1px solid ${palette.grey[800]} !important`},
-          "& .MuiDataGrid-columnHeaders" : {borderBottom:`1px solid ${palette.grey[800]} !important`}
+          "& .MuiDataGrid-columnHeaders" : {borderBottom:`1px solid ${palette.grey[800]} !important`},
       }}>
         <DataGrid 
           columnHeaderHeight={25} 
@@ -151,7 +151,7 @@ const pieChartData = useMemo(()=>{
         <Box height='15px' width='40%' bgcolor={palette.primary[600]} borderRadius="1rem" >
         </Box>
       </Box>
-      <Typography margin='1rem 1rem'  variant='h6'>
+      <Typography margin='0 1rem'  variant='h6'>
         The curious cat chased the bouncing ball through the garden, leaping over the colorful flowers and playfully swatting at the fluttering butterflies. Its sleek fur shimmered in the sunlight as it gracefully pounced and twirled, displaying its agile movements. The garden echoed with the sound of chirping birds and rustling leaves, creating a symphony of nature's melodies. The cat's playful antics brought joy to the onlookers, who couldn't help but smile at the whimsical sight
       </Typography>
     </DashboardBox>

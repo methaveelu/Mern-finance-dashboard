@@ -113,7 +113,7 @@ const Row2 = (props: Props) => {
             top: 20,
             right: 20,
             bottom: 40,
-            left: 0,
+            left: -10,
           }}
         >
           <CartesianGrid stroke={palette.grey[800]}/>

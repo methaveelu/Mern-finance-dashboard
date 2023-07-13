@@ -50,7 +50,7 @@ const formattedData =useMemo(()=>{
               Show Predicted revenue  
             </Button>
         </FlexBetween>
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height={700}>
           <LineChart
             data={formattedData}
             margin={{

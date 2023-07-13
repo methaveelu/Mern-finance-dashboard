@@ -1,18 +1,14 @@
 import DashboardBox from '@/components/DashboardBox'
 import { DataGrid, GridCellParams } from '@mui/x-data-grid';
 import { useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } from '@/state/api'
-import React, { useMemo } from 'react'
+import  { useMemo } from 'react'
 import BoxHeader from '@/components/BoxHeader';
 import { useTheme, Typography  } from '@mui/material'
 import Box from '@mui/material/Box'
 import FlexBetween from '@/components/FlexBetween';
 import { Pie, PieChart, Cell } from 'recharts';
 
-
-
-type Props = {}
-
-const Row3 = (props: Props) => {
+const Row3 = () => {
   const {data: kpiData} = useGetKpisQuery()
   const {data: productData}= useGetProductsQuery()
   const {data: transactionData}= useGetTransactionsQuery()
@@ -152,7 +148,7 @@ const pieChartData = useMemo(()=>{
         </Box>
       </Box>
       <Typography margin='0 1rem'  variant='h6'>
-        The curious cat chased the bouncing ball through the garden, leaping over the colorful flowers and playfully swatting at the fluttering butterflies. Its sleek fur shimmered in the sunlight as it gracefully pounced and twirled, displaying its agile movements. The garden echoed with the sound of chirping birds and rustling leaves, creating a symphony of nature's melodies. The cat's playful antics brought joy to the onlookers, who couldn't help but smile at the whimsical sight
+        The curious cat chased the bouncing ball through the garden, leaping over the colorful flowers and playfully swatting at the fluttering butterflies. Its sleek fur shimmered in the sunlight as it gracefully pounced and twirled, displaying its agile movements. The garden echoed with the sound of chirping birds and rustling leaves, creating a symphony of nature's melodies.
       </Typography>
     </DashboardBox>
     </>

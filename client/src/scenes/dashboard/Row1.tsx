@@ -6,10 +6,6 @@ import {useTheme} from '@mui/material'
 import BoxHeader from '@/components/BoxHeader'
 
 
-// type Props = {}
-
-
-
 const Row1 = () => {
     const {palette} = useTheme()
     const {data} = useGetKpisQuery()
@@ -95,8 +91,8 @@ const Row1 = () => {
                 />
               </linearGradient>
             </defs>
-            <XAxis dataKey="name" tickLine={false} style={{fontSize:"15px"}}/>
-            <YAxis axisLine={{strokeWidth:'0'}} tickLine={false} style={{fontSize:"15px"}} domain={[8000,23000]}/>
+            <XAxis dataKey="name" tickLine={false} style={{fontSize:"12px"}}/>
+            <YAxis axisLine={{strokeWidth:'0'}} tickLine={false} style={{fontSize:"12px"}} domain={[8000,23000]}/>
             <Tooltip />
             <Area type="monotone" dataKey="revenue" stroke={palette.primary.main} dot={true} fillOpacity={1} fill="url(#colorRevenue)" />
             <Area type="monotone" dataKey="expenses" stroke={palette.secondary.main} dot={true} fillOpacity={1} fill="url(#colorExpenses)" />
@@ -123,9 +119,9 @@ const Row1 = () => {
             }}
           >
             <CartesianGrid vertical={false} stroke={palette.grey[800]}/>
-            <XAxis dataKey="name" tickLine={false} style={{fontSize:"15px"}}/>
-            <YAxis yAxisId='left' orientation='left' axisLine={false} tickLine={false} style={{fontSize:"15px"}}  tickFormatter={(value) => Math.round(value)}/>
-            <YAxis yAxisId='right' orientation='right' axisLine={false} tickLine={false} style={{fontSize:"15px"}} />
+            <XAxis dataKey="name" tickLine={false} style={{fontSize:"12px"}}/>
+            <YAxis yAxisId='left' orientation='left' axisLine={false} tickLine={false} style={{fontSize:"12px"}}  tickFormatter={(value) => Math.round(value)}/>
+            <YAxis yAxisId='right' orientation='right' axisLine={false} tickLine={false} style={{fontSize:"12px"}} />
             <Tooltip />
             <Legend height={20} wrapperStyle={{
               margin: '0 0 10px 0'
@@ -169,8 +165,8 @@ const Row1 = () => {
                 />
               </linearGradient>
             </defs>
-            <XAxis dataKey="name" axisLine={false} tickLine={false} style={{fontSize:'10px'}}/>
-            <YAxis axisLine={false} tickLine={false} style={{fontSize:'10px'}}/>
+            <XAxis dataKey="name" axisLine={false} tickLine={false} style={{fontSize:'12px'}}/>
+            <YAxis axisLine={false} tickLine={false} style={{fontSize:'12px'}}/>
             <Tooltip />
             <Legend />
             <Bar dataKey="revenue" fill="url(#colorRevenue)" />

@@ -20,6 +20,43 @@ FROM base as build
 RUN apt-get update -qq && \
     apt-get install -y python-is-python3 pkg-config build-essential 
 
+COPY <<-"EOF" /app/package.json
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.3.2",
+    "mongoose-currency": "^0.2.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.3.3"
+  }
+}
+EOF
+
+RUN npm install --legacy-peer-deps
+
+# Remove development dependencies
+RUN npm prune --production --legacy-peer-deps
+
 # Install node modules
 COPY --link package.json yarn.lock ./
 RUN yarn install --frozen-lockfile

@@ -1,17 +1,13 @@
 import DashboardBox from '@/components/DashboardBox'
 import { useGetProductsQuery, useGetKpisQuery } from '@/state/api';
-import React from 'react'
-import BoxHeader from '@/components/BoxHeader';
 import { ResponsiveContainer, LineChart,CartesianGrid,  XAxis, YAxis, ZAxis, Tooltip, Area, Line,
    Legend, AreaChart, BarChart, Bar, Pie, PieChart, Cell, Scatter, ScatterChart } from 'recharts' 
 import {Typography, useTheme, Box} from '@mui/material'
 import {useMemo} from 'react'
 import FlexBetween from '@/components/FlexBetween';
-import { flushSync } from 'react-dom';
+import BoxHeader from '@/components/BoxHeader';
 
-type Props = {}
-
-const Row2 = (props: Props) => {
+const Row2 = () => {
   const {data:productData}= useGetProductsQuery()
   const {data: operationalData}= useGetKpisQuery()
   const {palette}= useTheme()
@@ -48,7 +44,7 @@ const Row2 = (props: Props) => {
   return (
     <>
     <DashboardBox  gridArea="d">
-    <BoxHeader 
+    <BoxHeader
         title='Non-Operational vs Operational expenses' 
         sideText='+4%'
       />
@@ -63,9 +59,9 @@ const Row2 = (props: Props) => {
             }}
           >
             <CartesianGrid vertical={false} stroke={palette.grey[800]}/>
-            <XAxis dataKey="name" tickLine={false} style={{fontSize:"15px"}}/>
-            <YAxis yAxisId='left' orientation='left' axisLine={false} tickLine={false} style={{fontSize:"15px"}}  tickFormatter={(value) => Math.round(value)}/>
-            <YAxis yAxisId='right' orientation='right' axisLine={false} tickLine={false} style={{fontSize:"15px"}} />
+            <XAxis dataKey="name" tickLine={false} style={{fontSize:"12px"}}/>
+            <YAxis yAxisId='left' orientation='left' axisLine={false} tickLine={false} style={{fontSize:"12px"}}  tickFormatter={(value) => Math.round(value)}/>
+            <YAxis yAxisId='right' orientation='right' axisLine={false} tickLine={false} style={{fontSize:"12px"}} />
             <Tooltip />
             <Line yAxisId='left' type="monotone" dataKey="Non-Operational Expenses" stroke={palette.tertiary[500]}/>
             <Line yAxisId='right' type="monotone" dataKey="Operational Expenses" stroke={palette.primary.main} />

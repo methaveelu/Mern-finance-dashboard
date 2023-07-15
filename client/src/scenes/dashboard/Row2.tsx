@@ -1,8 +1,8 @@
 import DashboardBox from '@/components/DashboardBox'
 import { useGetProductsQuery, useGetKpisQuery } from '@/state/api';
-import { ResponsiveContainer, LineChart,CartesianGrid,  XAxis, YAxis, ZAxis, Tooltip, Area, Line,
-   Legend, AreaChart, BarChart, Bar, Pie, PieChart, Cell, Scatter, ScatterChart } from 'recharts' 
-import {Typography, useTheme, Box} from '@mui/material'
+import { ResponsiveContainer, LineChart,CartesianGrid,  XAxis, YAxis, ZAxis, Tooltip, Line,
+    Pie, PieChart, Cell, Scatter, ScatterChart } from 'recharts' 
+import {Typography, Box} from '@mui/material'
 import {useMemo} from 'react'
 import FlexBetween from '@/components/FlexBetween';
 import BoxHeader from '@/components/BoxHeader';

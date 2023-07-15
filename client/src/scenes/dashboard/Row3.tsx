@@ -3,7 +3,7 @@ import { DataGrid, GridCellParams } from '@mui/x-data-grid';
 import { useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } from '@/state/api'
 import  { useMemo } from 'react'
 import BoxHeader from '@/components/BoxHeader';
-import { useTheme, Typography  } from '@mui/material'
+import {  Typography  } from '@mui/material'
 import Box from '@mui/material/Box'
 import FlexBetween from '@/components/FlexBetween';
 import { Pie, PieChart, Cell } from 'recharts';

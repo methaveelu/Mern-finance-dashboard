@@ -8,7 +8,6 @@ import regression, {DataPoint} from 'regression';
 
 
 const Predictions = () => {
-const {palette} = useTheme()
 const [isPredictions, setIsPredictions] = useState(false)
 const {data: kpiData}= useGetKpisQuery()
 
@@ -46,7 +45,7 @@ const formattedData =useMemo(()=>{
             </Box>
             <Button 
                 onClick={()=> setIsPredictions(!isPredictions)} 
-                sx={{ color:palette.grey[900], backgroundColor:palette.grey[700], boxShadow: "0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,.9)", }} >
+                sx={{ color:'#242427', backgroundColor:'#6b6d74', boxShadow: "0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,.9)", }} >
               Show Predicted revenue  
             </Button>
         </FlexBetween>
@@ -60,7 +59,7 @@ const formattedData =useMemo(()=>{
               bottom: 80,
             }}
           >
-            <CartesianGrid strokeDasharray="3 3" stroke={palette.grey[800]}/>
+            <CartesianGrid strokeDasharray="3 3" stroke={'#48494e'}/>
             <XAxis dataKey="name" tickLine={false} style={{fontSize:"15px"}}>
                 <Label value="Month" offset={-5} position={'insideBottom'}/>
             </XAxis>
@@ -70,11 +69,11 @@ const formattedData =useMemo(()=>{
             <Tooltip />
             <Legend verticalAlign='top'/>
             {/* dot plot */}
-            <Line type="monotone" dataKey="Actual Revenue" stroke={palette.primary.main} strokeWidth={0} dot={{strokeWidth:5}}/>
+            <Line type="monotone" dataKey="Actual Revenue" stroke='#12efc8' strokeWidth={0} dot={{strokeWidth:5}}/>
             {/* linear line */}
             <Line  type="monotone" dataKey="Regression Line" stroke="#8884d8" dot={false}/>
             {isPredictions && (
-                <Line  strokeDasharray={"5 5"} dataKey="Predicted Revenue" stroke={palette.secondary[500]} dot={false}/>
+                <Line  strokeDasharray={"5 5"} dataKey="Predicted Revenue" stroke='#f2b455' dot={false}/>
             )}
           </LineChart>
       </ResponsiveContainer>

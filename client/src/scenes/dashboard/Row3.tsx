@@ -12,8 +12,7 @@ const Row3 = () => {
   const {data: kpiData} = useGetKpisQuery()
   const {data: productData}= useGetProductsQuery()
   const {data: transactionData}= useGetTransactionsQuery()
-  const {palette} = useTheme()
-  const pieColors = [palette.primary[800], palette.primary[300]]
+  const pieColors = ['#076050', '#71F5DE']
 
   const productColumns = [
     {
@@ -89,9 +88,9 @@ const pieChartData = useMemo(()=>{
       <BoxHeader title='List of Products' sideText={`${productData?.length} products`}/>
       {/* use box to style DataGrid . &. is to target the child component*/}
       <Box mt='0.5rem' p='0 0.5rem' height="75%" 
-      sx={{"& .MuiDataGrid-root" : {color: palette.grey[300], border:'none'},
-          "& .MuiDataGrid-cell" : {borderBottom:`1px solid ${palette.grey[800]} !important`},
-          "& .MuiDataGrid-columnHeaders" : {borderBottom:`1px solid ${palette.grey[800]} !important`},
+      sx={{"& .MuiDataGrid-root" : {color: '#D1D3DA', border:'none'},
+          "& .MuiDataGrid-cell" : {borderBottom:`1px solid ${'#48494e'} !important`},
+          "& .MuiDataGrid-columnHeaders" : {borderBottom:`1px solid ${'#48494e'} !important`},
       }}>
         <DataGrid 
           columnHeaderHeight={25} 
@@ -105,9 +104,9 @@ const pieChartData = useMemo(()=>{
     <BoxHeader title='Recent Orders' sideText={`${transactionData?.length} latest transactions`}/>
       {/* use box to style DataGrid . &. is to target the child component*/}
       <Box mt='1rem' p='0 0.5rem' height="80%" 
-      sx={{"& .MuiDataGrid-root" : {color: palette.grey[300], border:'none'},
-          "& .MuiDataGrid-cell" : {borderBottom:`1px solid ${palette.grey[800]} !important`},
-          "& .MuiDataGrid-columnHeaders" : {borderBottom:`1px solid ${palette.grey[800]} !important`}
+      sx={{"& .MuiDataGrid-root" : {color: '#D1D3DA', border:'none'},
+          "& .MuiDataGrid-cell" : {borderBottom:`1px solid ${'#48494e'} !important`},
+          "& .MuiDataGrid-columnHeaders" : {borderBottom:`1px solid ${'#48494e'} !important`}
       }}>
         <DataGrid 
           columnHeaderHeight={25} 
@@ -143,8 +142,8 @@ const pieChartData = useMemo(()=>{
     </DashboardBox>
     <DashboardBox  gridArea="j">
       <BoxHeader title="Overall Summary an Explanation Data" sideText="+4%" />
-      <Box height='15px'margin= '1.25rem 1rem 0.4rem 1rem' bgcolor={palette.primary[800]} borderRadius="1rem">
-        <Box height='15px' width='40%' bgcolor={palette.primary[600]} borderRadius="1rem" >
+      <Box height='15px'margin= '1.25rem 1rem 0.4rem 1rem' bgcolor={'#076050'} borderRadius="1rem">
+        <Box height='15px' width='40%' bgcolor={'#0ebfa0'} borderRadius="1rem" >
         </Box>
       </Box>
       <Typography margin='0 1rem'  variant='h6'>

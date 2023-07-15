@@ -119,7 +119,7 @@ const Row1 = () => {
           >
             <CartesianGrid vertical={false} stroke={'#48494e'}/>
             <XAxis dataKey="name" tickLine={false} style={{fontSize:"12px"}}/>
-            <YAxis yAxisId='left' orientation='left' axisLine={false} tickLine={false} style={{fontSize:"12px"}}  tickFormatter={(value) => Math.round(value)}/>
+            <YAxis yAxisId='left' orientation='left' axisLine={false} tickLine={false} style={{fontSize:"12px"}}  />
             <YAxis yAxisId='right' orientation='right' axisLine={false} tickLine={false} style={{fontSize:"12px"}} />
             <Tooltip />
             <Legend height={20} wrapperStyle={{

@@ -1,7 +1,7 @@
 import DashboardBox from '@/components/DashboardBox'
 import FlexBetween from '@/components/FlexBetween'
 import { useGetKpisQuery } from '@/state/api'
-import { Box, Button, Typography} from '@mui/material'
+import { Box, Button, Typography, useTheme } from '@mui/material'
 import  { useMemo, useState } from 'react'
 import { CartesianGrid, Label, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import regression, {DataPoint} from 'regression';
@@ -61,10 +61,10 @@ const formattedData =useMemo(()=>{
           >
             <CartesianGrid strokeDasharray="3 3" stroke={'#48494e'}/>
             <XAxis dataKey="name" tickLine={false} style={{fontSize:"15px"}}>
-                <Label value="Month" offset={-5} position={'insideBottom'}/>
+                <Label offset={-5} position={'insideBottom'}>Month</Label>
             </XAxis>
-            <YAxis domain={[12000, 26000]} axisLine={{strokeWidth: '0'}} tickLine={false} style={{fontSize:"15px"}}  tickFormatter={(value) => Math.round(value)}>
-                <Label value={"revenue in USD"} offset={-5} position={'insideLeft'} angle={-90}/>
+            <YAxis domain={[12000, 26000]} axisLine={{strokeWidth: '0'}} tickLine={false} style={{fontSize:"15px"}}  >
+                <Label offset={-5} position={'insideLeft'} angle={-90}>revenue in USD</Label>
             </YAxis>
             <Tooltip />
             <Legend verticalAlign='top'/>

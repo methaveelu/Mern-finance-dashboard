@@ -10,8 +10,8 @@ import BoxHeader from '@/components/BoxHeader';
 const Row2 = () => {
   const {data:productData}= useGetProductsQuery()
   const {data: operationalData}= useGetKpisQuery()
-  const {palette}= useTheme()
-  const pieColors = [palette.primary[800], palette.primary[300]]
+
+  const pieColors = ['#076050', '#71F5DE']
   const OperationalExpenses = useMemo(() => {
     return (
       operationalData && operationalData[0].monthlyData.map(({ month, operationalExpenses, nonOperationalExpenses }) => {
@@ -58,13 +58,13 @@ const Row2 = () => {
               bottom: 55,
             }}
           >
-            <CartesianGrid vertical={false} stroke={palette.grey[800]}/>
+            <CartesianGrid vertical={false} stroke={'#48494e'}/>
             <XAxis dataKey="name" tickLine={false} style={{fontSize:"12px"}}/>
             <YAxis yAxisId='left' orientation='left' axisLine={false} tickLine={false} style={{fontSize:"12px"}}  tickFormatter={(value) => Math.round(value)}/>
             <YAxis yAxisId='right' orientation='right' axisLine={false} tickLine={false} style={{fontSize:"12px"}} />
             <Tooltip />
-            <Line yAxisId='left' type="monotone" dataKey="Non-Operational Expenses" stroke={palette.tertiary[500]}/>
-            <Line yAxisId='right' type="monotone" dataKey="Operational Expenses" stroke={palette.primary.main} />
+            <Line yAxisId='left' type="monotone" dataKey="Non-Operational Expenses" stroke={'#12EFC8'}/>
+            <Line yAxisId='right' type="monotone" dataKey="Operational Expenses" stroke={'#8884D8'} />
           </LineChart>
       </ResponsiveContainer>
     </DashboardBox>
@@ -88,7 +88,7 @@ const Row2 = () => {
         
         <Box ml="-1rem" flexBasis="40%" textAlign="center">
           <Typography variant="h5">Target Sales</Typography>
-          <Typography m="0.3rem 0.5rem" variant="h3" color={palette.primary[300]}>83</Typography>
+          <Typography m="0.3rem 0.5rem" variant="h3" color={'#71F5DE'}>83</Typography>
           <Typography variant="h6">Finance Goals of the campaign</Typography>
         </Box>
 
@@ -112,7 +112,7 @@ const Row2 = () => {
             left: -10,
           }}
         >
-          <CartesianGrid stroke={palette.grey[800]}/>
+          <CartesianGrid stroke={'#48494e'}/>
           <XAxis type="number" dataKey="price" name="price" axisLine={false}
              tickLine={false} style={{fontSize: "15px"}} tickFormatter={(v)=>`$${v}`}/>
           <YAxis type="number" dataKey="expense" name="expense"  axisLine={false}
@@ -120,7 +120,7 @@ const Row2 = () => {
           <ZAxis type="number" range ={[20]}/> 
           {/* z axis changes the size of the dots */}
           <Tooltip formatter={(v)=>`$${v}`} />
-          <Scatter name="Product expense ratio" data={productExpenseData} fill={palette.tertiary[500]} />
+          <Scatter name="Product expense ratio" data={productExpenseData} fill={'#8884D8'} />
         </ScatterChart>
       </ResponsiveContainer>
     </DashboardBox>

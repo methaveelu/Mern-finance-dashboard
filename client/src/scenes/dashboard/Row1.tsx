@@ -7,7 +7,7 @@ import BoxHeader from '@/components/BoxHeader'
 
 
 const Row1 = () => {
-    const {palette} = useTheme()
+
     const {data} = useGetKpisQuery()
     
     const revenue = useMemo(() => {
@@ -69,24 +69,24 @@ const Row1 = () => {
               <linearGradient id='colorRevenue' x1='0' y1='0' x2='0' y2='1'> 
                 <stop
                   offset='5%'
-                  stopColor={palette.primary[300]}
+                  stopColor={'#12EFC8'}
                   stopOpacity={0.5}
                 />
                 <stop
                   offset='95%'
-                  stopColor={palette.primary[300]}
+                  stopColor={'#12EFC8'}
                   stopOpacity={0}
                 />
               </linearGradient>
               <linearGradient id='colorExpenses' x1='0' y1='0' x2='0' y2='1'> 
                 <stop
                   offset='5%'
-                  stopColor={palette.secondary[300]}
+                  stopColor={'#F0B455'}
                   stopOpacity={0.5}
                 />
                 <stop
                   offset='95%'
-                  stopColor={palette.secondary[300]}
+                  stopColor={'#F0B455'}
                   stopOpacity={0}
                 />
               </linearGradient>
@@ -94,8 +94,8 @@ const Row1 = () => {
             <XAxis dataKey="name" tickLine={false} style={{fontSize:"12px"}}/>
             <YAxis axisLine={{strokeWidth:'0'}} tickLine={false} style={{fontSize:"12px"}} domain={[8000,23000]}/>
             <Tooltip />
-            <Area type="monotone" dataKey="revenue" stroke={palette.primary.main} dot={true} fillOpacity={1} fill="url(#colorRevenue)" />
-            <Area type="monotone" dataKey="expenses" stroke={palette.secondary.main} dot={true} fillOpacity={1} fill="url(#colorExpenses)" />
+            <Area type="monotone" dataKey="revenue" stroke={'#12EFC8'} dot={true} fillOpacity={1} fill="url(#colorRevenue)" />
+            <Area type="monotone" dataKey="expenses" stroke={'#F0B455'} dot={true} fillOpacity={1} fill="url(#colorExpenses)" />
           </AreaChart>
       </ResponsiveContainer>
     </DashboardBox>
@@ -118,7 +118,7 @@ const Row1 = () => {
               bottom: 55,
             }}
           >
-            <CartesianGrid vertical={false} stroke={palette.grey[800]}/>
+            <CartesianGrid vertical={false} stroke={'#48494e'}/>
             <XAxis dataKey="name" tickLine={false} style={{fontSize:"12px"}}/>
             <YAxis yAxisId='left' orientation='left' axisLine={false} tickLine={false} style={{fontSize:"12px"}}  tickFormatter={(value) => Math.round(value)}/>
             <YAxis yAxisId='right' orientation='right' axisLine={false} tickLine={false} style={{fontSize:"12px"}} />
@@ -126,8 +126,8 @@ const Row1 = () => {
             <Legend height={20} wrapperStyle={{
               margin: '0 0 10px 0'
             }}/>
-            <Line yAxisId='left' type="monotone" dataKey="profit" stroke={palette.tertiary[500]}/>
-            <Line yAxisId='right' type="monotone" dataKey="revenue" stroke={palette.primary.main} />
+            <Line yAxisId='left' type="monotone" dataKey="profit" stroke={'#8884D8'}/>
+            <Line yAxisId='right' type="monotone" dataKey="revenue" stroke={'#12EFC8'} />
           </LineChart>
       </ResponsiveContainer>
     </DashboardBox>
@@ -150,17 +150,17 @@ const Row1 = () => {
               bottom: 58,
             }}
           >
-            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <CartesianGrid vertical={false} stroke={'#48494e'} />
             <defs>
               <linearGradient id='colorRevenue' x1='0' y1='0' x2='0' y2='1'> 
                 <stop
                   offset='5%'
-                  stopColor={palette.primary[300]}
+                  stopColor={'#F0B455'}
                   stopOpacity={0.5}
                 />
                 <stop
                   offset='95%'
-                  stopColor={palette.primary[300]}
+                  stopColor={'#F0B455'}
                   stopOpacity={0}
                 />
               </linearGradient>

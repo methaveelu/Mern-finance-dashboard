@@ -42,7 +42,6 @@ COPY <<-"EOF" /app/package.json
     "express": "^4.18.2",
     "helmet": "^7.0.0",
     "mongoose": "^7.3.2",
-    "mongoose-currency": "^0.2.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1"
   },

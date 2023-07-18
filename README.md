@@ -66,8 +66,7 @@ The Motivation behind this project was to challenge myself to learn new technolo
 ## Project Setup:
 
 # Frontend Development:
-_Development environment_
--------------------------
+<u>_Development environment_</u>
 Vite was chosen over Create React App (CRA) as it offers a significantly faster dev server than Create React App (CRA), providing quicker reloads during development. However, Vite's speed advantage is focused on the development environment, not deployment. Thereafter, the dependencies are installed for the usage of MUI, Redux, and Redux Toolkit.
 
 _Webpage design_
@@ -86,9 +85,11 @@ Redux is utilized to manage the state of the application. To overcome some of th
 
 3) Backend Development:
 
-4) Integration:
 
-5) Testing and Refinement:
+
+5) Integration:
+
+6) Testing and Refinement:
 
 
 | CRUD | Method | Endpoint |  

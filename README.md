@@ -1,17 +1,5 @@
-# Mern-finance-dashboard
-
-## E-Commerce (Weddingproducts)
+## MERN-finance-dashboard
 A MERN stack Finance dashboard for businesses to keep track of their finances and overall performance. The dashboard using Material UI provides a breakdown of the key performance indicators and other types of data to provide a concise overview of the company's performance.
-
-
-Section 1: Introduction and Overview of the Application
-In this application, we'll be building a data analytics dashboard that includes multiple charts and tables. We'll use Recharts to create area charts, line charts, bar charts, pie charts, and scatter plots. These types of charts are commonly used in data analytics dashboards.
-
-Section 2: Displaying Data with Data Grid
-We'll also display lists of products and orders using the Data Grid component. By downloading the Data Grid library, we can easily set up and populate the tables with the required information.
-
-Section 3: Revenue Predictions with Machine Learning
-On the predictions page, we'll focus on revenue information for a particular company. We'll utilize regression analysis to plot a best-fit line that represents the data trend. With this regression line, we can make predictions about future revenue. This application will involve basic machine learning concepts.
 
 Section 4: Backend Development and Data Modeling
 The application won't be limited to the front end; it will also have a backend. We'll use Lucidchart to organize and model our data for the backend. This step will help us structure our data effectively before building the backend functionality.
@@ -78,14 +66,19 @@ The Motivation behind this project was to challenge myself to learn new technolo
 ## Project Setup:
 
 # Frontend Development:
-* Development environment - Vite was chosen over Create React App (CRA) as it offers a significantly faster dev server than Create React App (CRA), providing quicker reloads during development. However, Vite's speed advantage is focused on the development environment, not deployment. Thereafter, the dependencies are installed for the usage of MUI, Redux, and Redux Toolkit.
+_Development environment_
+Vite was chosen over Create React App (CRA) as it offers a significantly faster dev server than Create React App (CRA), providing quicker reloads during development. However, Vite's speed advantage is focused on the development environment, not deployment. Thereafter, the dependencies are installed for the usage of MUI, Redux, and Redux Toolkit.
 
-* Webpage design - To create a grid-styled dashboard with customizable labeled grids using Material-UI's Box component, it is possible to replicate the functionality of CSS's grid-template-areas property. By leveraging the Box component's style properties, you can define the layout and customize the size, color, and other attributes of the grids.
+_Webpage design_
+To create a grid-styled dashboard with customizable labeled grids using Material-UI's Box component, it is possible to replicate the functionality of CSS's grid-template-areas property. By leveraging the Box component's style properties, you can define the layout and customize the size, color, and other attributes of the grids.
 
+_Data Visualization_
 To visualize the business data, Recharts was used to create area charts, line charts, bar charts, pie charts, and scatter plots. Next, to display the lists of products and orders, the Data Grid library is utilized to easily set up and populate the tables with the required information.
 
 On the predictions page, the objective is to display a projection of future revenue for a particular company. Using the  regression-js javascript module, a best-fit regression line can be plotted based on the trending revenue data to provide estimated future revenue predictions.  
 
+_State Management_
+Redux is utilized to manage the state of the application. To overcome some of the common pain points associated with setting up the Redux, the Redux Toolkit (RTK) helps to reduce the boilerplate code. such as action creators and reducers, by offering a concise and intuitive API.
 
 3) Backend Development:
 

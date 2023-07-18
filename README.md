@@ -80,7 +80,7 @@ The Motivation behind this project was to challenge myself to learn new technolo
 # Frontend Development:
 For the development environment, Vite was chosen over Create React App (CRA) as it offers a significantly faster dev server than Create React App (CRA), providing quicker reloads during development. However, Vite's speed advantage is focused on the development environment, not deployment. Thereafter, the dependencies are installed for the usage of MUI, Redux, and Redux Toolkit.
 
-To create the grid styled dashboard,  Material-UI's Box component is used to replicate the properties of the grid-template-area CSS. The 'labeled' grids are made customizable in terms of size, color etc.
+To create a grid-styled dashboard with customizable labeled grids using Material-UI's Box component, it is possible to replicate the functionality of CSS's grid-template-areas property. By leveraging the Box component's style properties, you can define the layout and customize the size, color, and other attributes of the grids.
 
 To visualize the business data, Recharts was used to create area charts, line charts, bar charts, pie charts, and scatter plots. Next, to display the lists of products and orders, the Data Grid library is utilized to easily set up and populate the tables with the required information.
 

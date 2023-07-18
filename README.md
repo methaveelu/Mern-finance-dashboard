@@ -27,11 +27,13 @@ As a user, I want to be able to:
 - [x] create a personal account for using the app with an authentication token sent to my email account
 
 ## Wireframes
-*Seller Dashboard Page
-<img width="868" alt="image" src="https://github.com/methaveelu/E-commerce-website-wedding-products/assets/110245885/6e0bdfc7-494d-45bd-87ab-8dc21018eb9f">
 
-*Best Selling Products Page
-<img width="899" alt="image" src="https://github.com/methaveelu/E-commerce-website-wedding-products/assets/110245885/ee037598-5b4c-4ac7-9c58-e974ddf1b6b7">
+*Main Dashboard Page
+<img width="1248" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/a2125eae-4231-4682-8d68-ae6a7a4b0d5c">
+
+*Predictions Page
+<img width="1251" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/e344e12a-6127-47de-a0dd-abba06f33bb1">
+
 
 ## Technologies used
 ### Frontend

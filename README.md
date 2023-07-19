@@ -79,6 +79,7 @@ Redux is utilized to manage the state of the application. To overcome some of th
 3) Backend Development:
 
 *__Data Modelling__:
+
 <img width="669" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/1c0b9fc8-dbb9-476e-ad78-c1986a9daaab">
 
 Data modeling for key performance indicators (KPIs) involves structuring and organizing data elements related to KPIs such as total profit, total revenue, total expenses, expenses by category, daily data, and monthly data.

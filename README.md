@@ -19,7 +19,6 @@ For machine learning predictions, we'll utilize the regression.js library, which
 
 By following these steps and using the mentioned technologies, you'll be able to build, deploy, and utilize the frontend, backend, and machine learning components of this data analytics dashboard application.
 
-<img width="1265" alt="image" src="https://github.com/methaveelu/E-commerce-website-wedding-products/assets/110245885/df26e8aa-c6f7-4f90-804a-6b3688b050e7">
 
 ## Description of App
 ### User Stories
@@ -82,8 +81,15 @@ Redux is utilized to manage the state of the application. To overcome some of th
 *__Data Modelling__:
 <img width="669" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/1c0b9fc8-dbb9-476e-ad78-c1986a9daaab">
 
-  
+Data modeling for key performance indicators (KPIs) involves structuring and organizing data elements related to KPIs such as total profit, total revenue, total expenses, expenses by category, daily data, and monthly data.
 
+When considering data modeling for KPIs, subsets of data models such as "transactions" and "products" are required to be  interconnected. These models contain attributes and relationships that capture the relevant data for analysis. 
+  
+Transactions Model: This model captures data related to individual transactions, such as transaction IDs, transaction dates, transaction amounts, and other relevant details. Each transaction is associated with a specific product, which can be represented as an array of product IDs.
+
+Products Model: The products model represents the entities or items being transacted. It includes attributes like product IDs, product names, prices, and other relevant information. Each product can have an array of transaction IDs associated with it, indicating the transactions in which that product was involved.
+
+By establishing these relationships between models, you can show the connections and dependencies between transactions and products. For example, by referencing the array of transaction IDs within a product, you can retrieve all the transactions associated with that specific product.
 
 
 5) Integration:

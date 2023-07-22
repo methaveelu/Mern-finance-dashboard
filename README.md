@@ -32,7 +32,7 @@ The Motivation behind this project was to challenge myself to learn new technolo
 
 ## Project Setup:
 
-# Frontend Development:
+### Frontend Development:
 (__Development environment__):
 Vite was chosen over Create React App (CRA) as it offers a significantly faster dev server than Create React App (CRA), providing quicker reloads during development. However, Vite's speed advantage is focused on the development environment, not deployment. 
 
@@ -51,7 +51,7 @@ On the predictions page, the objective is to display a projection of future reve
 (__State Management__):
 Redux is utilized to manage the state of the application. To overcome some of the common pain points associated with setting up the Redux, the Redux Toolkit (RTK) helps to reduce the boilerplate code. such as action creators and reducers, by offering a concise and intuitive API.
 
-# Backend Development:
+### Backend Development:
 
 (__Data Modelling__):
 
@@ -94,6 +94,13 @@ Development Speed: In some cases, the strictness of static typing can slow down 
 Challenges with Third-Party Libraries: When using third-party libraries or dependencies without TypeScript definitions, developers may have to resort to type assertions or create custom typings, which can be cumbersome and error-prone. Personally, there were some issues When integrating Mongoose-currency with TypeScript. Likely due to the dependency not having any TypeScript type definitions, causing TypeScript to complain about missing or incompatible types.
 
 Despite these challenges, static typing brings significant benefits in terms of early error detection, code readability, IDE support, refactoring safety, and better collaboration in larger development teams. The decision to use static typing should consider the project's requirements, the team's expertise, and the potential long-term benefits of improved code quality and maintainability.
+
+(__Styling of MUI components__):
+
+__CSS-in-JS Learning Curve:__ Material-UI encourages using CSS-in-JS solutions like makeStyles, styled-components, or emotion for styling components. Developers who are not familiar with these approaches may find it challenging to understand the syntax and organization of styles within the component code.
+
+__Responsive Styling:__ Creating responsive designs that adapt well to different screen sizes can be challenging. MUI offers responsive utilities like useMediaQuery, but coordinating styles across different breakpoints may require extra effort.
+
 
 ## Possible Extensions
 

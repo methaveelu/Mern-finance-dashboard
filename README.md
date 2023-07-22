@@ -69,54 +69,31 @@ By establishing these relationships between models, the connections and dependen
 
 ## Challenges
 
-* Setting up of redux toolkit
-Setting up Redux Toolkit (RTK) can be straightforward and streamlined, thanks to its built-in utilities and simplified syntax. However, like any new technology or library, there are potential challenges that developers might face during the setup process. Some common challenges include:
+(__Setting up of redux toolkit__):
+Setting up Redux Toolkit (RTK) can be straightforward and streamlined, thanks to its built-in utilities and simplified syntax. However, like any new technology or library, there are some challenges faced which includes:
 
-Learning Curve: If developers are new to Redux or RTK, there might be a learning curve to understand the core concepts, principles, and best practices of Redux and how RTK simplifies some of the traditional Redux boilerplate.
-
-Project Integration: Integrating Redux Toolkit into an existing project may require refactoring existing code to fit the new Redux structure. This can be time-consuming and require a good understanding of the application architecture.
-
-Configuring Redux Store: Configuring the Redux store properly with middleware, dev tools, and other options can be daunting, especially for larger applications. However, RTK provides a configureStore function that abstracts much of this complexity.
-
-Async Operations: Handling asynchronous operations, such as making API calls, can be challenging. While RTK provides the createAsyncThunk utility to simplify async actions, managing complex async flows can still be tricky.
-
-Redux DevTools: Integrating Redux DevTools for debugging can sometimes be challenging, especially if the setup involves custom middleware or specific configurations.
+Learning Curve: Being new to RTK, there might be a learning curve to understand the core concepts, principles, and best practices of Redux and how RTK simplifies some of the traditional Redux boilerplate.
 
 TypeScript Integration: While TypeScript support in RTK is excellent, configuring the TypeScript types for custom reducers, actions, and selectors might require some extra effort, especially when working with complex data structures.
 
-File Organization: Deciding how to organize Redux-related files, such as actions, reducers, and selectors, can be subjective and may require some thought to maintain a clean and scalable project structure.
-
-Testing: Writing tests for Redux logic can be complex, especially when dealing with asynchronous actions and selectors. Ensuring proper test coverage and mocking dependencies can be a challenge.
-
 Despite these challenges, Redux Toolkit is designed to address many of the common pain points associated with using plain Redux. By following the official documentation, examples, and community best practices, developers can overcome these challenges and enjoy the benefits of a more efficient and maintainable state management solution in their applications.
 
-* Static typing of the variables
+(__Static typing of the variables__):
 
-In TypeScript, static typing allows you to explicitly define the types of variables, function parameters, and return values at compile-time, providing greater type safety and catching potential type-related errors during development.
+In TypeScript, static typing allows us to define the types of variables, function parameters, and return values at compile-time, providing greater type safety and catching potential type-related errors early during development.
 
-By defining interfaces for API response objects, the code establishes a contract that specifies the expected data structure of the API responses. This helps ensure that the data received from the backend conforms to the specified structure, and any deviations will be flagged as type errors during the development process.
+By defining interfaces for API response objects, the code specifies the expected data structure of the API responses. This helps ensure that the data received from the backend conforms to the specified structure, and any deviations will be flagged as type errors during the development process.
 
-Some of the common pain points of static typing include:
+However there are some pain points of static typing which includes:
 
 Initial Setup and Learning Curve: Setting up static typing in a project, especially with TypeScript, may require additional configuration and a learning curve for developers who are not familiar with the language or typing concepts.
 
-Code Verbosity: Static typing can lead to more verbose code, as type annotations need to be added to variables, function parameters, and return values. This can make the code look cluttered and increase the lines of code.
+Development Speed: In some cases, the strictness of static typing can slow down development, as developers may need to spend more time defining the structure of the response objects returned from various API endpoints.
 
-Development Speed: In some cases, the strictness of static typing can slow down development, as developers may need to spend more time defining and maintaining types. This can be especially true for quick prototyping or small projects.
+Challenges with Third-Party Libraries: When using third-party libraries or dependencies without TypeScript definitions, developers may have to resort to type assertions or create custom typings, which can be cumbersome and error-prone. Personally, there were some issues When integrating Mongoose-currency with TypeScript. Likely due to the dependency not having any TypeScript type definitions, causing TypeScript to complain about missing or incompatible types.
 
-Challenges with Third-Party Libraries: When using third-party libraries without TypeScript definitions, developers may have to resort to type assertions or create custom typings, which can be cumbersome and error-prone.
-
-Type Inference Complexity: While TypeScript has powerful type inference capabilities, complex scenarios or deeply nested data structures may require explicit type annotations, making the codebase more complex.
-
-Flexibility Trade-off: Static typing enforces stricter rules on types, which can limit the flexibility and dynamism of the code. This may be a concern for developers who prefer a more dynamic and loosely-typed approach.
-
-Developer Familiarity: Some developers who are more accustomed to dynamic languages or who have not worked extensively with static typing may find it challenging to adapt to the paradigm.
-
-Integration with Existing Code: Introducing static typing to an existing codebase can be challenging, especially in large projects with legacy code. The process of converting code to use TypeScript may require considerable effort and planning.
-
-Despite these challenges, it's important to note that static typing brings significant benefits in terms of early error detection, code readability, IDE support, refactoring safety, and better collaboration in larger development teams. The decision to use static typing should consider the project's requirements, the team's expertise, and the potential long-term benefits of improved code quality and maintainability.
-
+Despite these challenges, static typing brings significant benefits in terms of early error detection, code readability, IDE support, refactoring safety, and better collaboration in larger development teams. The decision to use static typing should consider the project's requirements, the team's expertise, and the potential long-term benefits of improved code quality and maintainability.
 
 ## Possible Extensions
 
-* Debugging of stripe and paypal payment API to process payments.
+* To create a CRUD function page for inputting new business data (monthly revenue, profit, and other KPI values) and displaying the data using Recharts for visualization.

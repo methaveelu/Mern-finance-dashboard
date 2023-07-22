@@ -1,13 +1,9 @@
 ## MERN-finance-dashboard
-A MERN stack Finance dashboard for businesses to keep track of their finances and overall performance. The dashboard using Material UI provides a breakdown of the key performance indicators and other types of data to provide a concise overview of the company's performance.
+The MERN stack Finance dashboard, designed with Material UI and Recharts, empowers businesses with a comprehensive and user-friendly financial management solution. The ability to track key performance indicators and visualize financial data in real-time enables businesses to make strategic decisions and optimize performance.
 
 ## Wireframes
 *Main Dashboard Page
 <img width="1248" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/a2125eae-4231-4682-8d68-ae6a7a4b0d5c">
-
-*Predictions Page
-<img width="1251" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/e344e12a-6127-47de-a0dd-abba06f33bb1">
-
 
 ## Technologies used
 ### Frontend
@@ -38,15 +34,18 @@ The Motivation behind this project was to challenge myself to learn new technolo
 
 # Frontend Development:
 (__Development environment__):
-Vite was chosen over Create React App (CRA) as it offers a significantly faster dev server than Create React App (CRA), providing quicker reloads during development. However, Vite's speed advantage is focused on the development environment, not deployment. Thereafter, the dependencies are installed for the usage of MUI, Redux, and Redux Toolkit.
+Vite was chosen over Create React App (CRA) as it offers a significantly faster dev server than Create React App (CRA), providing quicker reloads during development. However, Vite's speed advantage is focused on the development environment, not deployment. 
 
 (__Webpage design__):
-To create a grid-styled dashboard with customizable labeled grids using Material-UI's Box component, it is possible to replicate the functionality of CSS's grid-template-areas property. By leveraging the Box component's style properties, you can define the layout and customize the size, color, and other attributes of the grids.
+To create a grid-styled dashboard with customizable labeled grids using Material-UI's Box component, it is possible to replicate the functionality of CSS's grid-template-areas property. By leveraging the Box component's style properties, we can create a matrix-like layout and customize the size, color, and other attributes of the individual grids.
 
 (__Data Visualization__):
 To visualize the business data, Recharts was used to create area charts, line charts, bar charts, pie charts, and scatter plots. Next, to display the lists of products and orders, the Data Grid library is utilized to easily set up and populate the tables with the required information.
 
-On the predictions page, the objective is to display a projection of future revenue for a particular company. Using the  regression-js javascript module, a best-fit regression line can be plotted based on the trending revenue data to provide estimated future revenue predictions.  
+On the predictions page, the objective is to display a projection of future revenue for a particular company. Using the  regression-js javascript module, a best-fit regression line can be plotted based on the trending revenue data to provide estimated future revenue predictions.
+
+ *Predictions Page
+<img width="781" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/ff6dce65-6e44-4f2b-a058-e1ba2b97e881">
 
 (__State Management__):
 Redux is utilized to manage the state of the application. To overcome some of the common pain points associated with setting up the Redux, the Redux Toolkit (RTK) helps to reduce the boilerplate code. such as action creators and reducers, by offering a concise and intuitive API.

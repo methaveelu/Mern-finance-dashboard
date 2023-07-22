@@ -45,6 +45,7 @@ To visualize the business data, Recharts was used to create area charts, line ch
 On the predictions page, the objective is to display a projection of future revenue for a particular company. Using the  regression-js javascript module, a best-fit regression line can be plotted based on the trending revenue data to provide estimated future revenue predictions.
 
  *Predictions Page
+ 
 <img width="781" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/ff6dce65-6e44-4f2b-a058-e1ba2b97e881">
 
 (__State Management__):

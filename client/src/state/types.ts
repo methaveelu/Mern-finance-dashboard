@@ -1,5 +1,6 @@
 
 // interface represents the object that we want the response to look like e.g. GetKpiResponse in api.ts
+//mimic the static data in data.js 
 export interface ExpensesByCategory {
     salaries: number;
     supplies: number;

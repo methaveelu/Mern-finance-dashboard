@@ -11,7 +11,7 @@ import { GetKpisResponse, GetProductsResponse, GetTransactionsResponse } from ".
 
 export const api = createApi({
     baseQuery:fetchBaseQuery({baseUrl: import.meta.env.VITE_BASE_URL}),
-    reducerPath: "main",
+    reducerPath: "main",//name of reducer and slice in redux
     tagTypes:["Kpis", "Products", "Transactions"], //name of each API data (can be seen in mongoose)
 
     endpoints:(build) =>({

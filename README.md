@@ -33,13 +33,13 @@ The Motivation behind this project was to challenge myself to learn new technolo
 ## Project Setup:
 
 ### Frontend Development:
-(__Development environment__):
+### (Development environment):
 Vite was chosen over Create React App (CRA) as it offers a significantly faster dev server than Create React App (CRA), providing quicker reloads during development. However, Vite's speed advantage is focused on the development environment, not deployment. 
 
-(__Webpage design__):
+### Webpage design:
 To create a grid-styled dashboard with customizable labeled grids using Material-UI's Box component, it is possible to replicate the functionality of CSS's grid-template-areas property. By leveraging the Box component's style properties, we can create a matrix-like layout and customize the size, color, and other attributes of the individual grids.
 
-(__Data Visualization__):
+### Data Visualization:
 To visualize the business data, Recharts was used to create area charts, line charts, bar charts, pie charts, and scatter plots. Next, to display the lists of products and orders, the Data Grid library is utilized to easily set up and populate the tables with the required information.
 
 On the predictions page, the objective is to display a projection of future revenue for a particular company. Using the  regression-js javascript module, a best-fit regression line can be plotted based on the trending revenue data to provide estimated future revenue predictions.
@@ -48,12 +48,12 @@ On the predictions page, the objective is to display a projection of future reve
  
 <img width="781" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/ff6dce65-6e44-4f2b-a058-e1ba2b97e881">
 
-(__State Management__):
+### State Management:
 Redux is utilized to manage the state of the application. To overcome some of the common pain points associated with setting up the Redux, the Redux Toolkit (RTK) helps to reduce the boilerplate code. such as action creators and reducers, by offering a concise and intuitive API.
 
 ### Backend Development:
 
-(__Data Modelling__):
+### Data Modelling:
 
 <img width="669" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/1c0b9fc8-dbb9-476e-ad78-c1986a9daaab">
 
@@ -61,15 +61,15 @@ Data modeling for key performance indicators (KPIs) involves structuring and org
 
 When considering data modeling for KPIs, subsets of data models such as "transactions" and "products" are required to be  interconnected. These models contain attributes and relationships that capture the relevant data for analysis. 
   
-(__Transactions Model__): This model captures data related to individual transactions, such as transaction IDs, transaction dates, transaction amounts, and other relevant details. Each transaction is associated with a specific product, which can be represented as an array of product IDs.
+### Transactions Model: This model captures data related to individual transactions, such as transaction IDs, transaction dates, transaction amounts, and other relevant details. Each transaction is associated with a specific product, which can be represented as an array of product IDs.
 
-(__Products Model__): The products model represents the entities or items being transacted. It includes attributes like product IDs, product names, prices, and other relevant information. Each product can have an array of transaction IDs associated with it, indicating the transactions in which that product was involved.
+### Products Model: The products model represents the entities or items being transacted. It includes attributes like product IDs, product names, prices, and other relevant information. Each product can have an array of transaction IDs associated with it, indicating the transactions in which that product was involved.
 
 By establishing these relationships between models, the connections and dependencies can be shown between transactions and products. For example, by referencing the array of transaction IDs within a product, users can retrieve all the transactions associated with that specific product.
 
 ## Challenges
 
-(__Setting up of redux toolkit__):
+### Setting up of redux toolkit :
 
 Setting up Redux Toolkit (RTK) can be straightforward and streamlined, thanks to its built-in utilities and simplified syntax. However, like any new technology or library, there are some challenges faced which includes:
 
@@ -79,7 +79,7 @@ TypeScript Integration: While TypeScript support in RTK is excellent, configurin
 
 Despite these challenges, Redux Toolkit is designed to address many of the common pain points associated with using plain Redux. By following the official documentation, examples, and community best practices, developers can overcome these challenges and enjoy the benefits of a more efficient and maintainable state management solution in their applications.
 
-(__Static typing of the variables__):
+### Static typing of the variables:
 
 In TypeScript, static typing allows us to define the types of variables, function parameters, and return values at compile-time, providing greater type safety and catching potential type-related errors early during development.
 
@@ -95,7 +95,7 @@ Challenges with Third-Party Libraries: When using third-party libraries or depen
 
 Despite these challenges, static typing brings significant benefits in terms of early error detection, code readability, IDE support, refactoring safety, and better collaboration in larger development teams. The decision to use static typing should consider the project's requirements, the team's expertise, and the potential long-term benefits of improved code quality and maintainability.
 
-(__Styling of MUI components__):
+### Styling of MUI components :
 
 __CSS-in-JS Learning Curve:__ Material-UI encourages using CSS-in-JS solutions like makeStyles, styled-components, or emotion for styling components. Developers who are not familiar with these approaches may find it challenging to understand the syntax and organization of styles within the component code.
 

@@ -61,25 +61,29 @@ Data modeling for key performance indicators (KPIs) involves structuring and org
 
 When considering data modeling for KPIs, subsets of data models such as "transactions" and "products" are required to be  interconnected. These models contain attributes and relationships that capture the relevant data for analysis. 
   
-__Transactions Model__: This model captures data related to individual transactions, such as transaction IDs, transaction dates, transaction amounts, and other relevant details. Each transaction is associated with a specific product, which can be represented as an array of product IDs.
+__Transactions Model__:
+This model captures data related to individual transactions, such as transaction IDs, transaction dates, transaction amounts, and other relevant details. Each transaction is associated with a specific product, which can be represented as an array of product IDs.
 
-__Products Model__: The products model represents the entities or items being transacted. It includes attributes like product IDs, product names, prices, and other relevant information. Each product can have an array of transaction IDs associated with it, indicating the transactions in which that product was involved.
+__Products Model__:
+The products model represents the entities or items being transacted. It includes attributes like product IDs, product names, prices, and other relevant information. Each product can have an array of transaction IDs associated with it, indicating the transactions in which that product was involved.
 
 By establishing these relationships between models, the connections and dependencies can be shown between transactions and products. For example, by referencing the array of transaction IDs within a product, users can retrieve all the transactions associated with that specific product.
 
 ## Challenges
 
-### Setting up of redux toolkit :
+### (Setting up of redux toolkit) :
 
 Setting up Redux Toolkit (RTK) can be straightforward and streamlined, thanks to its built-in utilities and simplified syntax. However, like any new technology or library, there are some challenges faced which includes:
 
-Learning Curve: Being new to RTK, there might be a learning curve to understand the core concepts, principles, and best practices of Redux and how RTK simplifies some of the traditional Redux boilerplate.
+__Learning Curve:__
+Being new to RTK, there might be a learning curve to understand the core concepts, principles, and best practices of Redux and how RTK simplifies some of the traditional Redux boilerplate.
 
-TypeScript Integration: While TypeScript support in RTK is excellent, configuring the TypeScript types for custom reducers, actions, and selectors might require some extra effort, especially when working with complex data structures.
+__TypeScript Integration:__
+While TypeScript support in RTK is excellent, configuring the TypeScript types for custom reducers, actions, and selectors might require some extra effort, especially when working with complex data structures.
 
 Despite these challenges, Redux Toolkit is designed to address many of the common pain points associated with using plain Redux. By following the official documentation, examples, and community best practices, developers can overcome these challenges and enjoy the benefits of a more efficient and maintainable state management solution in their applications.
 
-### Static typing of the variables:
+### (Static typing of the variables):
 
 In TypeScript, static typing allows us to define the types of variables, function parameters, and return values at compile-time, providing greater type safety and catching potential type-related errors early during development.
 
@@ -87,21 +91,30 @@ By defining interfaces for API response objects, the code specifies the expected
 
 However there are some pain points of static typing which includes:
 
-Initial Setup and Learning Curve: Setting up static typing in a project, especially with TypeScript, may require additional configuration and a learning curve for developers who are not familiar with the language or typing concepts.
+__Initial Setup and Learning Curve__:
+Setting up static typing in a project, especially with TypeScript, may require additional configuration and a learning curve for developers who are not familiar with the language or typing concepts.
 
-Development Speed: In some cases, the strictness of static typing can slow down development, as developers may need to spend more time defining the structure of the response objects returned from various API endpoints.
+__Development Speed__:
+In some cases, the strictness of static typing can slow down development, as developers may need to spend more time defining the structure of the response objects returned from various API endpoints.
 
-Challenges with Third-Party Libraries: When using third-party libraries or dependencies without TypeScript definitions, developers may have to resort to type assertions or create custom typings, which can be cumbersome and error-prone. Personally, there were some issues When integrating Mongoose-currency with TypeScript. Likely due to the dependency not having any TypeScript type definitions, causing TypeScript to complain about missing or incompatible types.
+__Challenges with Third-Party Libraries__:
+When using third-party libraries or dependencies without TypeScript definitions, developers may have to resort to type assertions or create custom typings, which can be cumbersome and error-prone. Personally, there were some issues When integrating Mongoose-currency with TypeScript. Likely due to the dependency not having any TypeScript type definitions, causing TypeScript to complain about missing or incompatible types.
 
 Despite these challenges, static typing brings significant benefits in terms of early error detection, code readability, IDE support, refactoring safety, and better collaboration in larger development teams. The decision to use static typing should consider the project's requirements, the team's expertise, and the potential long-term benefits of improved code quality and maintainability.
 
-### Styling of MUI components :
+### (Styling of components) :
 
-__CSS-in-JS Learning Curve:__ Material-UI encourages using CSS-in-JS solutions like makeStyles, styled-components, or emotion for styling components. Developers who are not familiar with these approaches may find it challenging to understand the syntax and organization of styles within the component code.
+__CSS-in-JS Learning Curve:__
+Material-UI encourages using CSS-in-JS solutions for styling components. Being unfamiliar with the syntax and organization of styles within the component code, it's time-consuming to take reference from the MUI documentation for the various components.
 
-__Responsive Styling:__ Creating responsive designs that adapt well to different screen sizes can be challenging. MUI offers responsive utilities like useMediaQuery, but coordinating styles across different breakpoints may require extra effort.
+While it may take some time to adapt to CSS-in-JS, this approach offers several benefits. For instance, it allows for better component encapsulation and avoids global style clashes. Furthermore, it enables theming and dynamic styling based on component props and context.
+
+__Responsive Styling:__
+Creating responsive designs that adapt well to different screen sizes can be challenging. MUI offers responsive utilities like useMediaQuery to conditionally render a webpage differently depending on the screen size. Being unfamilar with the use of media query and the CSS Grid properties led to the error of infinitely expanding screen. However, after understanding the syntax to set grid row height, the error was resolve
+
+*Snippet of error
+<img width="1234" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/b68ee90a-3584-4559-bf7f-866d3ce6a4cc">
 
 
 ## Possible Extensions
-
 * To create a CRUD function page for inputting new business data (monthly revenue, profit, and other KPI values) and displaying the data using Recharts for visualization.

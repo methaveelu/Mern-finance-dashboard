@@ -51,7 +51,7 @@ On the predictions page, the objective is to display a projection of future reve
 (__State Management__):
 Redux is utilized to manage the state of the application. To overcome some of the common pain points associated with setting up the Redux, the Redux Toolkit (RTK) helps to reduce the boilerplate code. such as action creators and reducers, by offering a concise and intuitive API.
 
-3) Backend Development:
+# Backend Development:
 
 (__Data Modelling__):
 

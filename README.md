@@ -70,6 +70,7 @@ By establishing these relationships between models, the connections and dependen
 ## Challenges
 
 (__Setting up of redux toolkit__):
+
 Setting up Redux Toolkit (RTK) can be straightforward and streamlined, thanks to its built-in utilities and simplified syntax. However, like any new technology or library, there are some challenges faced which includes:
 
 Learning Curve: Being new to RTK, there might be a learning curve to understand the core concepts, principles, and best practices of Redux and how RTK simplifies some of the traditional Redux boilerplate.

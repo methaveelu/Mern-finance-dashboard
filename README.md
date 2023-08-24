@@ -39,6 +39,8 @@ Vite was chosen over Create React App (CRA) as it offers a significantly faster 
 ### (Webpage design):
 To create a grid-styled dashboard with customizable labeled grids using Material-UI's Box component, it is possible to replicate the functionality of CSS's grid-template-areas property. By leveraging the Box component's style properties, we can create a matrix-like layout and customize the size, color, and other attributes of the individual grids.
 
+<img width="329" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/9042555a-5cb7-410a-83b4-aae45648afbe">
+
 ### (Data Visualization):
 To visualize the business data, Recharts was used to create area charts, line charts, bar charts, pie charts, and scatter plots. Next, to display the lists of products and orders, the Data Grid library is utilized to easily set up and populate the tables with the required information.
 
@@ -46,7 +48,7 @@ On the predictions page, the objective is to display a projection of future reve
 
 *Predictions Page
  
-<img width="781" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/ff6dce65-6e44-4f2b-a058-e1ba2b97e881">
+<img width="516" alt="image" src="https://github.com/methaveelu/Mern-finance-dashboard/assets/110245885/a0ab7580-923b-40b4-b895-7cd9a08ebc0f">
 
 ### State Management:
 Redux is utilized to manage the state of the application. To overcome some of the common pain points associated with setting up the Redux, the Redux Toolkit (RTK) helps to reduce the boilerplate code. such as action creators and reducers, by offering a concise and intuitive API.
